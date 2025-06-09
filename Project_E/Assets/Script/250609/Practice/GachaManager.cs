@@ -62,16 +62,16 @@ public class GachaManager : MonoBehaviour
     {
         var img = Instantiate(displayImagePrefab, canvasParent);
         img.sprite = GetSpriteByRarity(info, rarity);
-        img.gameObject.AddComponent<Button>().onClick.AddListener(() => Destroy(img.gameObject));
+        img.GetComponent<Button>().onClick.AddListener(() => Destroy(img.gameObject));
     }
 
     void ShowTenPullImages()
     {
-        foreach (var result in tenPullResults)
+        foreach (var result in tenPullResults) // var result는 튜플로, character와 rarity를 포함합니다.
         {
-            var img = Instantiate(displayImagePrefab, canvasParent);
+            var img = Instantiate(displayImagePrefab, canvasParent); // var의 자료형은 image 타입이 됩니다.
             img.sprite = GetSpriteByRarity(result.character, result.rarity);
-            img.gameObject.AddComponent<Button>().onClick.AddListener(() => Destroy(img.gameObject));
+            img.GetComponent<Button>().onClick.AddListener(() => Destroy(img.gameObject));
         }
     }
 
