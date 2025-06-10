@@ -44,14 +44,14 @@ public class ControlFlow : MonoBehaviour
         }
         */
 
-        int randomValue2 = Random.Range(1, 51);
+        int randomValue2 = Random.Range(1, 101); // 1이상 101미만의 랜덤한 값을 받아 오겠다. (1 ~ 100)
         int gachaCount = 0;
         int pickUpProbability = Random.Range(1, 3); // 픽업 확률을 위한 변수. (1~2, 50% 확률로 픽업이 나옴)
 
-        if (randomValue2 <= 5) // 1~5, 10%
+        if (randomValue2 <= 10) // 1~10, 10%
         {
             
-            if (pickUpProbability <= 1) // 1이면 일반 S급, 2이면 픽업 S급
+            if (1 >= pickUpProbability) // 1이면 일반 S급, 2이면 픽업 S급
             {
                 Debug.Log("S급을 뽑았다!");
                 Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
@@ -64,19 +64,19 @@ public class ControlFlow : MonoBehaviour
                 gachaCount++;
             }
         }
-        else if (randomValue2 <= 15) // 6~15, 20%
+        else if (randomValue2 <= 30) // 11~30, 20%
         {
             Debug.Log("A급을 뽑았다!");
             Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
             gachaCount++;
         }
-        else if (randomValue2 <= 30) // 16~30, 30%
+        else if (randomValue2 <= 60) // 31~60, 30%
         {
             Debug.Log("B급을 뽑았다!");
             Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
             gachaCount++;
         }
-        else // 31~50, 50%
+        else // 61~100, 40%
         {
             Debug.Log("C급을 뽑았다!");
             Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
