@@ -42,15 +42,16 @@ public class ControlFlow : MonoBehaviour
             Debug.Log("치치를 뽑아버렸다!");
             Debug.Log($"랜덤한 값은 {randomValue}입니다.");
         }
+        */
 
         int randomValue2 = Random.Range(1, 51);
         int gachaCount = 0;
-        int pickUpProbability = Random.Range(1, 3); // 픽업 확률을 위한 변수
+        int pickUpProbability = Random.Range(1, 3); // 픽업 확률을 위한 변수. (1~2, 50% 확률로 픽업이 나옴)
 
         if (randomValue2 <= 5) // 1~5, 10%
         {
             
-            if (pickUpProbability <= 1)
+            if (pickUpProbability <= 1) // 1이면 일반 S급, 2이면 픽업 S급
             {
                 Debug.Log("S급을 뽑았다!");
                 Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
@@ -81,7 +82,7 @@ public class ControlFlow : MonoBehaviour
             Debug.Log($"{randomValue2}, 가챠 횟수 : {gachaCount}");
             gachaCount++;
         }
-        */
+
         /*
         for (int i = 0; i < 5; i++) // 0부터 4까지 반복문을 실행한다. (5번 반복)
         {
