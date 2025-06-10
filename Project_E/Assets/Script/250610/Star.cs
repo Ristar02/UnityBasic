@@ -39,7 +39,7 @@ public class Star : MonoBehaviour
 
         for (int i = 0; i < 5; i++) // 5번 반복
         {
-            for (int j = 0; j < i + 1; j++) // i + 1번 반복
+            for (int j = 0; j < i + 1; j++) // i + 1번 반복. i = 0일 때 1번, i = 1일 때 2번, ..., i = 4일 때 5번 반복
             {
                 star += "★"; // 별
             }
@@ -85,14 +85,14 @@ public class Star : MonoBehaviour
             {
                 star += "★"; // 별
             }
-            star += "\n"; // 줄바꿈
+            star += "\n"; // 줄바꿈. 총 줄바꿈 횟수는 5번.
         }
 
         for (int i = 0; i < 4; i++) // 4번 반복. 
         {
             for (int j = 0; j < 4 - i; j++) // 4-i번 반복. i=0일 때 4번, i=1일때 3번 ... i=3일 때 1번 반복
             {
-                star += "★";
+                star += "★"; // 별
             }
             if (i < 3) // 마지막 줄이 아닐 때
             {
@@ -153,12 +153,12 @@ public class Star : MonoBehaviour
             {
                 star += "★"; // 별
             }
-            star += "\n"; // 줄바꿈
+            star += "\n"; // 줄바꿈. 총 줄바꿈 횟수는 5번.
         }
 
         for (int i = 0; i < 4; i++) // 4번 반복
         {
-            for (int j = 0; j < i + 1; j++)
+            for (int j = 0; j < i + 1; j++) // i + 1번 반복. i=0일 때 1번, i=1일 때 2번, ..., i=3일 때 4번 반복
             {
                 star += "    "; // 빈칸
             }
