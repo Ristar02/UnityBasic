@@ -130,7 +130,7 @@ public class Star : MonoBehaviour
             {
                 star += "★"; // 별
             }
-            if (1 < 3) // 마지막 줄이 아닐 때
+            if (i < 3) // 마지막 줄이 아닐 때
             {
                 star += "\n"; // 줄바꿈
             }
